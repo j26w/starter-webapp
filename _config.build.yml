@@ -1,8 +1,8 @@
 # Run during the 'gulp build' command
 # Overrides these options in _config.yml
 
-baseurl: /starter-webapp
-url: https://j26w.github.io
+baseurl: ""
+url: http://starter-webapp.yellowdogagency.com
 
 # Hides your drafts and future posts
 future: false
