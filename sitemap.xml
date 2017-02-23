@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://j26w.github.io/starter-webapp/jekyll/welcome-to-jekyll.html</loc>
+<loc>http://starter-webapp.s3-website-us-east-1.amazonaws.com/jekyll/welcome-to-jekyll.html</loc>
 <lastmod>2015-02-03T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>https://j26w.github.io/starter-webapp/jekyll/test-post.html</loc>
+<loc>http://starter-webapp.s3-website-us-east-1.amazonaws.com/jekyll/test-post.html</loc>
 <lastmod>2017-02-23T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>https://j26w.github.io/starter-webapp/404/</loc>
+<loc>http://starter-webapp.s3-website-us-east-1.amazonaws.com/404/</loc>
 </url>
 <url>
-<loc>https://j26w.github.io/starter-webapp/about/</loc>
+<loc>http://starter-webapp.s3-website-us-east-1.amazonaws.com/about/</loc>
 </url>
 <url>
-<loc>https://j26w.github.io/starter-webapp/</loc>
+<loc>http://starter-webapp.s3-website-us-east-1.amazonaws.com/</loc>
 </url>
 </urlset>
