@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://starter-webapp.yellowdogagency.com//jekyll/welcome-to-jekyll.html</loc>
+<loc>http://starter-webapp.yellowdogagency.com/jekyll/welcome-to-jekyll.html</loc>
 <lastmod>2015-02-03T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://starter-webapp.yellowdogagency.com//jekyll/test-post.html</loc>
+<loc>http://starter-webapp.yellowdogagency.com/jekyll/test-post.html</loc>
 <lastmod>2017-02-23T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://starter-webapp.yellowdogagency.com//404/</loc>
+<loc>http://starter-webapp.yellowdogagency.com/404/</loc>
 </url>
 <url>
-<loc>http://starter-webapp.yellowdogagency.com//about/</loc>
+<loc>http://starter-webapp.yellowdogagency.com/about/</loc>
 </url>
 <url>
-<loc>http://starter-webapp.yellowdogagency.com//</loc>
+<loc>http://starter-webapp.yellowdogagency.com/</loc>
 </url>
 </urlset>
