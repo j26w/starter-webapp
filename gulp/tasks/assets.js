@@ -108,9 +108,9 @@ gulp.task('styles:critical:page', function () {
       css: ['src/_includes/style.css'],
       dimensions: pageDimensions,
       dest: '../src/_includes/critical-page.css',
-      minify: false,
+      minify: true,
       extract: false,
-      include: [/fonts-loaded/,/yd-grid/,/yd-content/,/^[a-zA-Z0-9.!@?#"$%&:';()*\+,\/;\-=[\\\]\^_{|}<>~` ]+$/],
+      include: [/fonts-loaded/,/yd-grid/,/yd-content/],
       ignore: ['@font-face',/url\(/] // defer loading of webfonts and background images
     }))
 });
