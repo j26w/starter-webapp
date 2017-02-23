@@ -11,7 +11,7 @@ gulp.task('inject:css', () =>
       },
       ignorePath: '.tmp',
       addRootSlash: false,
-      addPrefix: '{{ site.url }}/{{ site.baseurl }}',
+      addPrefix: '{{ site.url }}{{ site.baseurl }}',
       removeTags: true
     }))
     .pipe(gulp.dest('.tmp/src/_layouts'))
@@ -26,7 +26,7 @@ gulp.task('inject:js', () =>
       	},
       	ignorePath: '.tmp',
       	addRootSlash: false,
-      	addPrefix: '{{ site.url }}/{{ site.baseurl }}',
+      	addPrefix: '{{ site.url }}{{ site.baseurl }}',
       	removeTags: true
     }))
     .pipe(gulp.dest('.tmp/src/_includes'))

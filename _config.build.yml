@@ -1,7 +1,7 @@
 # Run during the 'gulp build' command
 # Overrides these options in _config.yml
 
-baseurl: starter-webapp
+baseurl: /starter-webapp
 url: https://j26w.github.io
 
 # Hides your drafts and future posts
