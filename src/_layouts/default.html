@@ -1,0 +1,64 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  {% seo %}
+  
+  <!-- RSS -->
+  {% feed_meta %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta http-equiv="cleartype" content="on">
+
+  <!--include in-line crtical css-->
+  <style>{% include critical-page.css %}</style>
+  
+  <script>
+    // Use loadCSS to asynchronously load non-critical CSS
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+    
+    // check if cookie exists and if so go ahead and apply the fonts-loaded class to html. would be better to check for cookie with php or SSI expr
+    // and use an if/then to write alternative html tags, one with the class and one without. this javascript option is for static sites like github-pages
+    if ( document.cookie.match(/^(.*;)?fonts-loaded=[^;]+(.*)?$/) ) {document.documentElement.className += ' fonts-loaded';}
+  </script>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/touch/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <!-- site icons 
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/assets/images/apple-touch-icon.png?v=RyowzAOe9M">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/images/favicon-32x32.png?v=RyowzAOe9M" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/images/favicon-16x16.png?v=RyowzAOe9M" sizes="16x16">
+  <link rel="manifest" href="{{ site.url }}/assets/images/manifest.json?v=RyowzAOe9M">
+  <link rel="mask-icon" href="{{ site.url }}/assets/images/safari-pinned-tab.svg?v=RyowzAOe9M" color="#000000">
+  <link rel="shortcut icon" href="{{ site.url }}/assets/images/favicon.ico?v=RyowzAOe9M">
+  <meta name="apple-mobile-web-app-title" content="Made Mistakes">
+  <meta name="application-name" content="Made Mistakes">
+    <meta name="msapplication-config" content="{{ site.url }}/assets/images/browserconfig.xml?v=RyowzAOe9M">
+  <meta name="theme-color" content="#ffffff">
+    / site icons -->
+
+</head>
+<body class="yd-wrap{% if page.classes %}{{ page.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+  {{ content }}
+
+
+
+  <!--load the non-critical css asynchronously-->
+  <script>
+      loadCSS("<!-- inject:css --><!-- endinject -->");
+  </script>
+  <noscript><link rel="stylesheet" href="<!-- inject:css --><!-- endinject -->"></noscript>
+
+  {% include scripts.html %}
+</body>
+</html>
