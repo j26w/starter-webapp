@@ -2,6 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 title: Starter Webapp
 description: A starter project build on Jekyll and Gulp.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: http://localhost:4000
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants

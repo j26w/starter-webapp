@@ -1,6 +1,9 @@
 # Run during the 'gulp build' command
 # Overrides these options in _config.yml
 
+baseurl: starter-webapp # the subpath of your site, e.g. /blog
+url: https://j26w.github.io
+
 # Hides your drafts and future posts
 future: false
 show_drafts: false
