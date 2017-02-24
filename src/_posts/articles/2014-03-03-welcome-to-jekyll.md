@@ -1,9 +1,9 @@
 ---
-layout: post
-date: 2015-02-03
-title:  Welcome to Jekyll!
-description: A post welcoming you to Jekyll
-categories: jekyll
+title: Title of the post
+excerpt: "This is the post excerpt."
+image: 
+  path: &image /assets/images/bridge.jpg
+tags: [sampletag]
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build
@@ -13,13 +13,7 @@ YYYY-MM-DD-name-of-post.ext.
 
 <!--more-->
 
-We've also added a lot of different settings for [Redcarpet][redcarpet],
-including being able to ^superscript, _underline_, ==highlight==,
-~~strikethrough~~, and footnotes.[^1] It even automatically makes links into
-URLs: www.jekyllrb.com and you can put multiple underscores in words without
-them leaning all over the place: this_word_has_underscores. It'll also make your
-quotes look nice, like this: "hoho", your dashes and hypens will be dashing too:
----/--.
+Lorem ipsum. Blah blah blah.
 
 Jekyll also offers powerful support for code snippets:
 
@@ -34,7 +28,6 @@ print_hi('Tom')
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of
 Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
-[redcarpet]: https://github.com/vmg/redcarpet
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll]:    http://jekyllrb.com/docs/home/
 [^1]: Who are quite handy

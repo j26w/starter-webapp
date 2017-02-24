@@ -49,7 +49,8 @@ lsi: false
 limit_posts: 10
 
 # Permalink structure and pagination options
-permalink: none
+# Jekyll configuration
+permalink: /:categories/:title/
 paginate: 10
 paginate_path: 'page:num'
 excerpt_separator: ''
@@ -74,3 +75,24 @@ gems:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
+
+# Collections
+collections:
+  work:
+    output    : true
+    permalink : /:collection/:path/
+    title     : Work
+
+# Front Matter Defaults
+defaults:
+  # News
+  - scope:
+      path: _posts/articles
+      type: posts
+    values:
+      layout: page
+      category: articles
+      read_time: true
+      breadcrumbs:
+        - label: "Blog Articles"
+          url: /articles/
