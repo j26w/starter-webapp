@@ -26,7 +26,8 @@ gulp.task('scripts', () =>
   // NOTE: The order here is important since it's concatenated in order from
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
-    'src/assets/javascript/vendor/*.js',
+    'src/assets/javascript/vendor/jquery/*.js',
+    'src/assets/javascript/vendor/plugins/**/*.js',
     'src/assets/javascript/main.js'
   ])
     .pipe(newer('.tmp/assets/javascript/index.js', {dest: '.tmp/assets/javascript', ext: '.js'}))
@@ -110,7 +111,7 @@ gulp.task('styles:critical:page', function () {
       dest: '../src/_includes/critical-page.css',
       minify: true,
       extract: false,
-      include: [/fonts-loaded/,/yd-grid/,/yd-content/],
+      include: [/fonts-loaded/,/yd-grid/,/yd-content/,/^[a-zA-Z0-9.!@?#"$%&:';()*\+,\/;\-=[\\\]\^_{|}<>~` ]+$/],
       ignore: ['@font-face',/url\(/] // defer loading of webfonts and background images
     }))
 });

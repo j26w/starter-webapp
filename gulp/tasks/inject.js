@@ -22,7 +22,7 @@ gulp.task('inject:js', () =>
   gulp.src('.tmp/src/_includes/scripts.html')
     .pipe(inject(gulp.src('.tmp/assets/javascript/*.js'), {
     	transform: function (filepath, file, i, length) {
-        	return filepath; // return filepath only
+        	return '<script async src="' + filepath + '"></script>';
       	},
       	ignorePath: '.tmp',
       	addRootSlash: false,
@@ -31,3 +31,4 @@ gulp.task('inject:js', () =>
     }))
     .pipe(gulp.dest('.tmp/src/_includes'))
 );
+

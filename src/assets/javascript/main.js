@@ -1,4 +1,3 @@
-/*! YellowDog   | http://www.yellowdogagency.com | (c) 2017 YellowDog Marketing Inc. */
 
 
 // add .js class to html if javascript enabled
