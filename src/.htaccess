@@ -9,8 +9,11 @@
 
 
 # Allow SSI
-Options +Includes
-AddHandler server-parsed .shtml .html .htm
+
+AddType text/html .shtml  
+AddHandler server-parsed .html  
+AddHandler server-parsed .shtml  
+Options Indexes FollowSymLinks Includes  
 
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #

@@ -126,11 +126,8 @@ gulp.task('serve', (done) => {
   browserSync.init({
     // tunnel: true,
     // open: false,
-    port: 4000, // change port to match default Jekyll
-    ui: {
-      port: 4001
-    },
-    server: ['.tmp', 'dist']
+  
+    host: "starter-webapp.dev"
   });
   done();
 

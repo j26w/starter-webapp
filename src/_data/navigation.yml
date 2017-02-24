@@ -3,5 +3,7 @@
   url: /
 - title: "About Us"
   url: /about/
-- title: "404 Page"
-  url: /404/
+- title: "Work Portfolio"
+  url: /work/
+- title: "News and Articles"
+  url: /articles/

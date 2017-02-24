@@ -3,7 +3,7 @@
 title: Starter Webapp
 description: A starter project build on Jekyll and Gulp.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://localhost:4000
+url: http://starter-webapp.dev
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
@@ -94,5 +94,5 @@ defaults:
       category: articles
       read_time: true
       breadcrumbs:
-        - label: "Blog Articles"
+        - label: "News and Articles"
           url: /articles/
