@@ -35,7 +35,7 @@ gulp.task('critical', gulp.series('styles:critical:page'));
 
 // You can also just use 'gulp upload' but this way you can see all the main
 // tasks in the gulpfile instead of having to hunt for the deploy tasks
-gulp.task('deploy', gulp.series('upload'));
+gulp.task('deploy', gulp.series('upload-rsync', 'upload-github'));
 
 // 'gulp rebuild' -- WARNING: Erases your assets and built site, use only when
 // you need to do a complete rebuild
