@@ -55,6 +55,52 @@ gulp.task('scripts', () =>
     .pipe(gulp.dest('.tmp/assets/javascript'))
 );
 
+gulp.task('scripts-nonasync-head', () =>
+  gulp.src([
+    'src/assets/javascript/nonasync-head.js'
+  ])
+    .pipe(newer('src/_includes/nonasync-head.js', {dest: 'src/_includes', ext: '.js'}))
+    .pipe(when(!argv.prod, sourcemaps.init()))
+
+    .pipe(concat('nonasync-head-final.js'))
+    .pipe(size({
+      showFiles: true
+    }))
+    .pipe(when(argv.prod, when('*.js', uglify({preserveComments: 'some'}))))
+    .pipe(when(argv.prod, size({
+      showFiles: true
+    })))
+    .pipe(when(argv.prod, gulp.dest('src/_includes')))
+    .pipe(when(argv.prod, size({
+      gzip: true,
+      showFiles: true
+    })))
+    .pipe(gulp.dest('src/_includes'))
+);
+
+gulp.task('scripts-nonasync-end', () =>
+  gulp.src([
+    'src/assets/javascript/nonasync-end.js'
+  ])
+    .pipe(newer('src/_includes/nonasync-end.js', {dest: 'src/_includes', ext: '.js'}))
+    .pipe(when(!argv.prod, sourcemaps.init()))
+
+    .pipe(concat('nonasync-end-final.js'))
+    .pipe(size({
+      showFiles: true
+    }))
+    .pipe(when(argv.prod, when('*.js', uglify({preserveComments: 'some'}))))
+    .pipe(when(argv.prod, size({
+      showFiles: true
+    })))
+    .pipe(when(argv.prod, gulp.dest('src/_includes')))
+    .pipe(when(argv.prod, size({
+      gzip: true,
+      showFiles: true
+    })))
+    .pipe(gulp.dest('src/_includes'))
+);
+
 // 'gulp styles' -- creates a CSS file from your SASS, adds prefixes and
 // creates a Sourcemap
 // 'gulp styles --prod' -- creates a CSS file from your SASS, adds prefixes and
