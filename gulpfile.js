@@ -1,4 +1,4 @@
-// generated on 2017-02-22 using generator-jekyllized 1.0.0-rc.7
+// generated on 2017-02-22 using generator-jekyllized 1.0.0-rc.7 
 'use strict';
 
 const gulp = require('gulp');
@@ -30,7 +30,7 @@ gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html'));
 // 'gulp critical' -- builds critical path CSS includes
 // WARNING: run this after substantial CSS changes
 // WARNING: .html files referenced need to exist, run after `gulp build` to ensure.
-gulp.task('critical', gulp.series('styles:critical:page'));
+gulp.task('critical', gulp.series('styles:critical:home'));
 
 
 // You can also just use 'gulp upload' but this way you can see all the main
