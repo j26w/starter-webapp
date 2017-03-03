@@ -442,6 +442,7 @@ template {
 /* 1220/16 */
 /* 1600/16 */
 /* 25/16 */
+/* 60/16 */
 /*===============================================
 /* Grid System
 ===============================================*/
@@ -523,6 +524,9 @@ template {
     display: block;
     clear: both; }
 
+.yd-container__padded {
+  padding: 0 1em; }
+
 /* Tells Susy there's 8 columns in the content */
 .yd-content {
   /* Styles for mobile view go here */
@@ -542,6 +546,51 @@ template {
       width: 32.2033898305%;
       float: right;
       margin-right: 0; } }
+
+nav.yd-nav__main div:nth-child(1) {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 23.7288135593%;
+  float: left;
+  margin-right: 1.6949152542%; }
+
+nav.yd-nav__main div:nth-child(2) {
+  width: 74.5762711864%;
+  float: right;
+  margin-right: 0; }
+
+nav.yd-nav__main div ul {
+  float: right;
+  margin: 0; }
+
+nav.yd-nav__main div ul li {
+  float: left; }
+
+nav.yd-nav__main div ul li:last-child:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+nav.yd-nav__main div ul li a {
+  display: inline-block;
+  padding: 0 0.7em;
+  font-size: 0.9em;
+  line-height: 80px;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  /* 1/16 */ }
+  @media (min-width: 60em) {
+    nav.yd-nav__main div ul li a {
+      font-size: 0.7em; } }
 
 footer {
   width: 100%;
@@ -789,6 +838,10 @@ img {
   border: 0;
   vertical-align: middle;
   box-sizing: border-box; }
+
+.yd-responsive-height {
+  max-height: 100%;
+  width: auto; }
 
 /*===============================================
 /* SVG Styles for Icons 
