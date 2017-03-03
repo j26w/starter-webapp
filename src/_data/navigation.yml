@@ -1,9 +1,42 @@
 # Main navigation
-- title: "Home"
-  url: /
-- title: "About Us"
-  url: /about/
-- title: "Work Portfolio"
-  url: /work/
-- title: "News and Articles"
-  url: /articles/
+main:
+  - title: "Home"
+    url: /
+  - title: "About Us"
+    url: /about/
+  - title: "Work"
+    url: /work/
+  - title: "Blog"
+    url: /articles/
+  - title: "Contact Us"
+    url: /contact/
+  - title: "Login"
+    url: /login/
+
+offcanvas:
+  - title: "Home"
+    url: /
+  - title: "About Us"
+    url: /about/
+  - title: "Work"
+    url: /work/
+  - title: "Blog"
+    url: /articles/
+  - title: "Contact Us"
+    url: /contact/
+  - title: "Login"
+    url: /login/
+
+footer:
+  - title: "Home"
+    url: /
+  - title: "About Us"
+    url: /about/
+  - title: "Work"
+    url: /work/
+  - title: "Blog"
+    url: /articles/
+  - title: "Contact Us"
+    url: /contact/
+  - title: "Login"
+    url: /login/

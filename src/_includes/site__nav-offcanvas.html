@@ -1,0 +1,17 @@
+<div id="offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <ul class="uk-nav uk-nav-offcanvas">
+	    {% for item in site.data.navigation.offcanvas %}
+	        
+	        {% assign class = nil %}
+	        {% if page.url contains item.url %}
+	        	{% assign class = 'uk-active' %}
+	        {% endif %}
+	        <li class="{{ class }}" >
+	        	<a href="{{ site.url}}{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+	        </li>
+
+	    {% endfor %}
+        </ul>
+    </div>
+</div>

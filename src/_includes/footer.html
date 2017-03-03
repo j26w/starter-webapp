@@ -1,38 +1,67 @@
-<footer class="site-footer">
+<footer role="contentinfo" id="site-footer">
+	<div class="yd-container">
+		<div class="uk-grid" data-uk-grid-margin>
+		    
+            <div class="uk-width-medium-1-3 uk-push-2-3 uk-text-center-small ">
+                <h3>Subscribe to Newsletter</h3>
+                <form class="uk-form" action="http://news.alliedfiber.com/t/r/s/ihtudyr/" method="post" id="subForm">
+                    <fieldset data-uk-margin>
+                        <input type="text" class="uk-form-large uk-margin-bottom" placeholder="youremail@example.com" id="fieldEmail" name="cm-ihtudyr-ihtudyr" required><br />
+                        <button class="uk-button uk-button-primary uk-button-large uk-margin-bottom" type="submit">Subscribe</button>
+                    </fieldset>
+                </form>
+            </div>
+		    
+            <div class="uk-width-medium-1-3 uk-pull-1-3 uk-text-center-small ">
+		      	<nav role="navigation">
+  					<ul class="uk-list">
+  					{% for item in site.data.navigation.footer %}
+                        {% assign class = nil %}
+                        {% if page.url contains item.url %}
+                            {% assign class = 'uk-active' %}
+                        {% endif %}
+                        <li class="{{ class }}" >
+                            <a href="{{ site.url}}{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+  					</ul>
+				  </nav><!-- /.bottom-menu -->
+		    </div>
 
-  <div class="wrapper">
+		    <div class="uk-width-medium-1-3 uk-pull-1-3">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.author.github %}
-          <li>
-            {% include icon-github.html username=site.author.github %}
-          </li>
-          {% endif %}
-
-          {% if site.author.twitter %}
-          <li>
-            {% include icon-twitter.html username=site.author.twitter %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
-  </div>
-
+		    </div>
+		</div>
+		<div class="uk-grid" data-uk-grid-margin>
+		    
+		    <div class="uk-width-medium-1-2 uk-push-1-2">
+			    <div class="uk-margin uk-text-center-small uk-text-right" uk-scrollspy-class="uk-animation-slide-right-small">
+				    <div class="uk-child-width-auto uk-flex-inline uk-grid-small" uk-grid>
+				        <div>
+				            <a href="https://twitter.com" class="uk-link-muted"><i class="uk-icon-twitter"></i></a>
+				        </div>
+				            <div>
+				            <a href="https://facebook.com" class="uk-link-muted"><i class="uk-icon-facebook"></i></a>
+				        </div>
+				            <div>
+				            <a href="https://plus.google.com" class="uk-link-muted"><i class="uk-icon-google-plus"></i></a>
+				        </div>
+				    </div>
+				</div>
+		    </div>
+		    
+		    <div class="uk-width-medium-1-2 uk-pull-1-2 uk-text-center-small">
+		        <p class="copyright" data-uk-scrollspy="{cls:'uk-animation-slide-left-small', repeat: true}">&#169; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p> 
+                <p class="uk-text-small" data-uk-scrollspy="{cls:'uk-animation-slide-bottom-small', repeat: true}"><a href="">Terms &amp; Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">Site Map</a></p>
+		    </div>
+		  
+		 </div>
+		 <div class="uk-grid uk-grid-collapse uk-margin-top uk-margin-remove-bottom">
+		    
+		    <div class="uk-width-1-1 uk-text-center" data-uk-scrollspy="{cls:'uk-animation-slide-bottom-small', repeat: true}">
+                <a href="#" class="uk-button" data-uk-smooth-scroll>Scroll to Top</a>
+		    </div>
+		  
+		 </div>
+	</div>
 </footer>

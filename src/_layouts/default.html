@@ -28,10 +28,14 @@
 
   <!-- htmlmin:ignore -->
   <!--#if expr="$HTTP_COOKIE=/fullcss\=true/" -->
-    <link rel="stylesheet" href="<!-- inject:css --><!-- endinject -->">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="<!-- inject:css --><!-- endinject -->">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
   <!--#else-->
-    <style>{% include critical-page.css %}</style>
+  {% if page.layout == "home" %}
+      <style>{% include critical-home.css %}</style>
+    {% else %}
+      <style>{% include critical-home.css %}</style>
+  {% endif %}
   <!--#endif-->
   <!-- htmlmin:ignore -->
 

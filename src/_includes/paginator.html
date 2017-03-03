@@ -1,0 +1,32 @@
+{% for post in paginator.posts %}
+  {% include archive__item.html %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+
+<ul class="uk-pagination">
+	
+	{% if paginator.previous_page %}
+	<li><a href="{{ paginator.previous_page_path | absolute_url }}"><i class="uk-icon-angle-double-left"></i></a></li>
+	{% else %}
+    <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+    {% endif %}
+    
+    {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+          <li {% if page.url == trail.path %}class="uk-active"{% endif %}>
+              {% if page.url == trail.path %}<span>{% else %}<a href="{{ trail.path | absolute_url }}" title="{{trail.title}}">{% endif %}{{ trail.num }}{% if page.url == trail.path %}</span>{% else %}</a>{% endif %}
+          </li>
+        {% endfor %}
+     {% endif %}
+    
+    {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path | absolute_url }}"><i class="uk-icon-angle-double-right"></i></a></li>
+    {% else %}
+    <li class="uk-disabled"><span><i class="uk-icon-angle-double-right"></i></span></li>
+    {% endif %}
+
+</ul>
+{% endif %}
+
+

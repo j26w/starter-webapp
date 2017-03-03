@@ -15,12 +15,12 @@
 $susy: (
   /* Tells Susy to use 12 columns */
   columns: 12,
+  // debug: (image: show),
   /* Tells Susy that the container has a max-width of 1120px */
   container: $page-container-maxwidth,
   /* Tells Susy to use border-box */
   global-box-sizing: border-box 
-  );
-
+);
 /* Makes border-box properties */
 @include border-box-sizing;
 
@@ -35,6 +35,7 @@ $susy: (
 /* Images and Media
 ===============================================*/
 img {max-width: 100%;height: auto;border: 0;vertical-align: middle;-moz-box-sizing: border-box;box-sizing: border-box;}
+.yd-responsive-height {max-height: 100%; width: auto;}
 
 /*===============================================
 /* SVG Styles for Icons 

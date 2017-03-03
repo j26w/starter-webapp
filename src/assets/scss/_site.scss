@@ -14,6 +14,10 @@
 .yd-container {
   @include container;
 }
+.yd-container__padded {
+  padding: 0 1em;
+}
+
 /* Tells Susy there's 8 columns in the content */
 .yd-content {
   /* Styles for mobile view go here */ 
@@ -33,6 +37,43 @@
     @include span(4 last); 
   }
 }
+
+nav.yd-nav__main div:nth-child(1) {
+      height: $navbar-height;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include span(3); 
+}
+
+nav.yd-nav__main div:nth-child(2) {
+      @include span(9 last); 
+}
+nav.yd-nav__main div ul {
+      float: right;
+      margin:0;
+}
+nav.yd-nav__main div ul li {
+      float: left;
+}
+nav.yd-nav__main div ul li:last-child:after  {
+    content: " ";
+    display: block;
+    clear: both;
+}
+nav.yd-nav__main div ul li a {
+      display: inline-block;
+      padding: 0 0.7em;  
+      font-size: 0.9em;
+      line-height: $navbar-height;  
+      text-transform: uppercase;
+      letter-spacing: 0.0625em;  /* 1/16 */
+    @media (min-width: $breakpoint-large) {
+      font-size: 0.7em; 
+  }
+      
+}
+
 footer {
 	@include span(12);
 }

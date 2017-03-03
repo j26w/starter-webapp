@@ -25,7 +25,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
-    jekyll-paginate (1.1.0)
+    jekyll-paginate-v2 (1.7.3)
+      jekyll (~> 3.0)
     jekyll-redirect-from (0.12.1)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
@@ -67,7 +68,7 @@ DEPENDENCIES
   jekyll-compose
   jekyll-feed
   jekyll-gist
-  jekyll-paginate
+  jekyll-paginate-v2
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
